@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국산업은행</title>
+    <style>
+
+        .entire-container{
+            height: 100vw;
+            display:flex;
+            flex-direction: column;
+        }
+        .header-container{
+            height: 30px;
+            display: flex;
+            flex-direction: row-reverse;
+            
+        }
+        .second-container{
+            display: flex;
+            flex-direction: row;
+            height: 50px;
+
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+            align-items: center;
+        }
+        .ad-container{
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            line-height: 500px;
+            text-align: center;
+            align-items: center;
+            background-color:aliceblue;
+        }
+        .fourth-container{
+            height: 900px;
+            display: flex;
+            flex-direction: column;
+            line-height: 700px;
+            text-align: center;
+            background-color: white;
+        }
+        .fifth-container{
+            position: relative;
+            top: -50px;
+            justify-content: center;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+        }
+        .fifth-item{
+            width: 300px;
+        }
+        .sixth-container{
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            justify-content: center;
+        }
+
+        .back-white{
+            background-color: white;
+        }
+        .back-rebe{
+            background-color: rebeccapurple;
+        }
+        body{
+            margin: 0px;
+        }
+        li{
+            list-style-type:none;
+            margin: 5px;
+        }
+        #demo{
+            visibility: hidden;
+        }
+        .header-container a{
+            color: white;
+        }
+        .second-container a{
+            color: black;
+        }
+        .paging-section{
+            position: relative;
+            bottom: 200px;
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <div class="entire-container">
+
+        <section class="back-rebe">
+            <ul class="header-container">
+                <li><input type="submit" value="검색"></li>
+                <li><input type="text"></input></li>
+                <li><a href="">ENG</a></li>
+                <li><a href="">인증센터</a></li>
+                <li><a href="">고객센터</a></li>
+            </ul>
+        </section>
+        <section>
+            <ul class="second-container">
+                <li><a href="">한국산업은행</a></li>
+                <li><a href="">개인뱅킹</a></li>
+                <li><a href="">기업뱅킹</a></li>
+                <li><a href="">금융상품물</a></li>
+                <li><a href="">퇴직연금</a></li>
+                <li><a href="">기업금융정보</a></li>
+                <li><a href="">은행소개</a></li>
+                <li id="demo">공백</li>
+                <li id="demo">공백</li>
+                <li><a href="">로그인</a></li>
+                <li><a href="">메뉴</a></li>
+            </ul>
+        </section>
+        <section class="ad-container">
+            언제나 고객과 함께합니다.
+            <section>
+                <ul class="paging-section">
+                    <li><a href="">←</a></li>
+                    <li>01/08</li>
+                    <li><a href="">→</a></li>
+                    <li><a href="">▢</a></li>
+                </ul>
+            </section>
+        </section>
+        <section class="fourth-container">
+            <section class="fifth-container">
+                <div class="fifth-item" style="background-color: blue" ></div>
+                <div class="fifth-item" style="background-color: purple;"></div>
+            </section>
+        </section>
+    </div>
+</body>
+</html>
