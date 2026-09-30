@@ -6,39 +6,27 @@
     <title>Document</title>
 
     <style>
+
         *{
-            box-sizing: border-box;
-            /* border: 1px solid white; */
+            border: 1px solid black;
         }
 
         body{
-            margin: 0;
             text-align: center;
             background-color: white;
+            margin: 0;
         }
 
         .container{
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
 
-            min-height: 100vh;
-
-            padding: 40px 0 60px;
+            gap: 30px;
         }
 
-        /* 사이트 제목 */
-        .title{
-            color: black;
-            font-size: 50px;
-            font-weight: bold;
-            font-style: italic;
-
-            margin: 0 0 30px;
-        }
-
-        /* 배너 */
-        .item-image{
+        .banner-image{
             width: 1200px;
             height: 514px;
 
@@ -47,60 +35,46 @@
 
         .slide-track{
             display: flex;
+
             animation: slide 20s infinite;
         }
 
-        .slide-track img{
-            width: 1200px;
-            height: 514px;
-
-            flex-shrink: 0;
-            object-fit: cover;
+        .item-grid{
+            display: grid;
+            grid-template-columns: repeat(3,300px);
+            gap: 50px;
+        }
+        .item > a{
+            width: 100%;
+            height: 100%;
         }
 
-        /* 설명 */
-        article{
+        .item img{
+            width: 100%;
+            height: 400px;
+            /* transition: 0.2s; */
+        }
+        /* .item img:hover{
+            transform: scale(1.1);
+        } */
+
+        .item{
+            /* background-color: white; */
             color: black;
-            font-weight: bold;
-            font-size: 24px;
 
-            margin-top: 30px;
-        }
-
-        /* 버튼 */
-        .button{
-            width: 200px;
-            height: 50px;
-
-            border: 3px solid black;
-            border-radius: 10px;
-
-            margin-top: 20px;
-
-            line-height: 44px;
+            width: 300px;
+            height: 450px;
 
             font-weight: bold;
-            font-size: 25px;
-
+            font-size: 20px;
+            font-style: italic;
             transition: 0.2s;
         }
 
-        .button:hover{
+        .item:hover{
             transform: scale(1.1);
         }
 
-        .button > a{
-            display: block;
-            width: 100%;
-            height: 100%;
-
-            color: black;
-            text-decoration: none;
-        }
-
-        .button > a:visited{
-            color: black;
-        }
         .slide-track > img{
             width: 1200px;
             height: 514px;
@@ -135,16 +109,15 @@
                 transform: translateX(0);
             }
         }
-    </style>
+
+</style>
 </head>
 
 <body>
 
     <div class="container">
-        
-        <p class="title">dessertier<p>
 
-        <div class="item-image">
+        <div class="banner-image">
 
             <div class="slide-track">
                 <img src="img/banner/배너피넛.png" alt="허니 피넛 크런치 케이크">
@@ -155,13 +128,31 @@
             </div>
 
         </div>
-
-        <article>
-            당신의 가장 달콤한 순간을 위해.
-        </article>
-
-        <div class="button">
-            <a href="menu.html">바로가기</a>
+        <div class="item-grid">
+            <div class="item">
+                <img src="img/items/peanut.png" alt="허니 피넛 크런치 케이크">
+                허니 피넛 크린치 케이크
+            </div>
+            <div class="item">
+                <img src="img/items/nut.png" alt="몽블랑 체스트넛 티라미수">
+                몽블랑 체스트넛 티라미수
+            </div>
+            <div class="item">
+                <img src="img/items/chocolate.png" alt="딥 다크 초콜릿 가나슈 케이크">
+                딥 다크 초콜릿 가나슈 케이크
+            </div>
+            <div class="item">
+                <img src="img/items/pistachio.png" alt="피스타치오 라즈베리 쁘띠 케이크">
+                피스타치오 라즈베리 쁘띠 케이크
+            </div>
+            <div class="item">
+                <a href="detail.html"><img src="img/items/cheeze.png" alt="바스크 번트 치즈케이크"></a>
+                바스크 번트 치즈케이크
+            </div>
+            <div class="item">
+                <span style="position: relative; top:200px;"><a href="wire.html">기획의도 & 와이어프레임</a></span>
+            </div>
+            
         </div>
 
     </div>
